@@ -27,6 +27,7 @@ export const Account = ({ navigation }) => {
           buttonColor="#ee8710"
           textColor="#fff"
           style={{ marginTop: 30, width: 330 }}
+          onPress={() => navigation.navigate("Register")}
         >
           CADASTRAR
         </Button>

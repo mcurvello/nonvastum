@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
       <CardImage
         source={{ uri: `${product.image}` }}
         style={{ width: 64, height: 64, borderRadius: 12 }}
-        resizeMode="contain"
+        resizeMode="cover"
       />
       <CardContent>
         <Text style={{ fontSize: 18, fontWeight: 600, color: "#09101D" }}>

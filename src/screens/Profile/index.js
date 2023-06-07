@@ -1,9 +1,12 @@
 import { View } from "react-native";
-import React from "react";
+import React, { useContext } from "react";
 import { SafeArea } from "../../components/SafeArea";
 import { Avatar, Button, Text } from "react-native-paper";
+import { AuthenticationContext } from "../../services/authentication/AuthenticationContext";
 
 const Profile = () => {
+  const { onLogout, user } = useContext(AuthenticationContext);
+
   return (
     <SafeArea style={{ alignItems: "center" }}>
       <Avatar.Icon
@@ -24,7 +27,7 @@ const Profile = () => {
         <Text variant="titleLarge" style={{ fontWeight: "bold" }}>
           Marcio Curvello
         </Text>
-        <Text variant="titleMedium">marciocurvello@gmail.com</Text>
+        <Text variant="titleMedium">{user.email}</Text>
         <Text variant="titleMedium">ACESSO: Consumidor</Text>
       </View>
 
@@ -32,7 +35,7 @@ const Profile = () => {
         icon="logout"
         mode="contained"
         style={{ width: "50%", backgroundColor: "#DC7700", marginTop: 20 }}
-        onPress={() => null}
+        onPress={() => onLogout()}
       >
         SAIR
       </Button>

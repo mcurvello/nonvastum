@@ -15,7 +15,7 @@ const Order = () => {
 const TAB_ICON = {
   Home: "home",
   Cesta: "shopping-basket",
-  Pedido: "chat",
+  Mercado: "search",
   Perfil: "person",
 };
 
@@ -36,7 +36,7 @@ export const Main = () => {
     <Tab.Navigator screenOptions={screenOptions}>
       <Tab.Screen name="Home" component={Menu} />
       <Tab.Screen name="Cesta" component={Basket} />
-      <Tab.Screen name="Pedido" component={Order} />
+      <Tab.Screen name="Mercado" component={Order} />
       <Tab.Screen name="Perfil" component={Profile} />
     </Tab.Navigator>
   );
